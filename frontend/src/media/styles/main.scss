@@ -1,0 +1,35 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-reg;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f3f8fb;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+
+  &:hover, &:focus, &:active {
+    outline: none;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  transition: width 0.2s linear;
+  padding: 30px 40px;
+  color: $dark-blue-30;
+  @include desktop {
+    padding: 30px 15px;
+  }
+}

@@ -1,0 +1,49 @@
+@import "../../media/styles/variables";
+@import "../../media/styles/mixins";
+
+.button {
+  border-radius: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: $font-semi;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:disabled {
+    opacity: 0.5;
+    @include pointer-none;
+    color: $gray-40;
+    background-color: transparent;
+    border: 1px solid $gray-40;
+  }
+}
+
+.btn-size-xs {
+  padding: 0 10px;
+  height: 30px;
+  text-transform: none;
+}
+
+.btn-size-s {
+  width: 24px;
+  height: 24px;
+}
+
+.btn-size-m {
+  width: 80px;
+  height: 40px;
+}
+
+.btn-color-green {
+  background-color: transparent;
+  color: $green-30;
+  border: 1px solid $green-30;
+
+  &:hover:not([disabled]) {
+    color: $dark-blue-30;
+    background-color: $green-10;
+    border-color: $green-10;
+  }
+}

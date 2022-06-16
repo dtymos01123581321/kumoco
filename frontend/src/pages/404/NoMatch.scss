@@ -1,0 +1,50 @@
+@import "../../media/styles/variables";
+@import "../../media/styles/mixins";
+
+.no-match {
+  position: relative;
+  height: 100vh;
+  overflow-x: hidden;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+  }
+
+  @include desktop {
+    background-position: bottom 10% right;
+  }
+  .header {
+    padding: 40px 0 0;
+  }
+  .not-found {
+    position: relative;
+    z-index: 100;
+    margin-top: 5%;
+    max-width: 300px;
+    text-align: center;
+    .title {
+      font-family: $font-bold;
+      font-size: 150px;
+      line-height: 1;
+      letter-spacing: 15px;
+      color: $dark-blue-30;
+    }
+    .desc {
+      margin-top: 15px;
+      font-size: 21px;
+      line-height: 1.14;
+      color: $dark-blue-30;
+    }
+    .btn {
+      margin-top: 40px;
+    }
+  }
+  .picture {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,133 @@
+@import "../../media/styles/mixins";
+@import "../../media/styles/variables";
+
+.users {
+  &_pagination {
+    margin: 20px;
+
+    button {
+      margin: 0 5px
+    }
+  }
+
+  .search-documents {
+    position: relative;
+    margin: 20px;
+
+    .search-bt {
+      display: block;
+      width: 14px;
+      height: 14px;
+      position: absolute;
+      background-color: initial;
+      top: calc(90% - 20px);
+      left: 15px;
+      line-height: 1;
+      border: none;
+    }
+
+    .input {
+      width: 400px;
+    }
+
+    .placeholder {
+      left: 48px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: inline-block;
+      width: calc(100% - 60px);
+    }
+  }
+
+  .card-list {
+    display: grid;
+    grid-gap: 40px;
+    justify-content: center;
+    grid-auto-flow: row dense;
+    grid-template-columns: repeat(auto-fill,360px);
+  }
+
+  .user-list-box {
+    width: 100%;
+    font-size: 14px;
+
+    .user-list {
+      .user-card {
+        & > div {
+          word-break: inherit;
+        }
+
+        .col-name {
+          font-family: $font-bold;
+        }
+
+        .col-registered, .col-modified {
+          display: flex;
+          flex-direction: column;
+
+          .time {
+            color: $gray-40;
+          }
+        }
+
+        .col-status {
+          display: flex;
+          flex-direction: column;
+
+          span {
+            font-family: $font-bold;
+            margin-bottom: 10px;
+            text-transform: capitalize;
+          }
+
+          button {
+            &:nth-child(1) {
+              margin-right: 12px;
+            }
+          }
+
+          @include max1365 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            span {
+              display: block;
+              margin-bottom: 0;
+              min-width: 80px;
+            }
+            .btn-box {
+              display: flex;
+              flex-direction: column;
+              width: max-content;
+
+              button {
+                width: 100px;
+                margin-right: 0;
+
+                &:nth-child(1) {
+                  margin-bottom: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .col-name {
+      flex-basis: 10%;
+      padding-left: 10px;
+    }
+
+    .col-email {
+      flex-basis: 30%;
+      padding-right: 10px;
+    }
+
+    .col-address{
+      flex-basis: 60%;
+    }
+
+  }
+}

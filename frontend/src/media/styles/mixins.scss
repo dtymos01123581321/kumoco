@@ -1,0 +1,121 @@
+@import 'variables';
+
+@mixin max1365 {
+  @media (max-width: 1365px) {
+    @content
+  }
+}
+
+@mixin desktop {
+  @media (max-width: 1250px) {
+    @content
+  }
+}
+
+@mixin max1100 {
+  @media (max-width: 1100px) {
+    @content
+  }
+}
+
+@mixin laptop {
+  @media (max-width: 1000px) {
+    @content
+  }
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content
+  }
+  &::-moz-placeholder {
+    @content
+  }
+  &:-ms-input-placeholder {
+    @content
+  }
+  &:-moz-placeholder {
+    @content
+  }
+  &::placeholder {
+    @content
+  }
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin appearance( $value ) {
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+  appearance: $value;
+}
+
+@mixin userSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin pointer-none {
+  -moz-pointer-events: none;
+  -webkit-pointer-events: none;
+  -o-pointer-events: none;
+  -ms-pointer-events: none;
+  pointer-events: none;
+}
+
+@mixin pointer-auto {
+  -moz-pointer-events: auto;
+  -webkit-pointer-events: auto;
+  -o-pointer-events: auto;
+  -ms-pointer-events: auto;
+  pointer-events: auto;
+}
+
+@mixin default-h1 {
+  font-family: $font-bold;
+  font-size: 50px;
+  line-height: 1.2;
+  letter-spacing: 6px;
+}
+
+@mixin default-h2 {
+  font-family: $font-bold;
+  font-size: 30px;
+  line-height: 1.5;
+  letter-spacing: 3px;
+}
+
+@mixin default-h3 {
+  font-family: $font-bold;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
+
+@mixin default-h4 {
+  font-family: $font-semi;
+  font-size: 14px;
+  line-height: 1;
+}
+
+@mixin default-h5 {
+  font-family: $font-reg;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@mixin default-h6 {
+  font-family: $font-semi;
+  font-size: 10px;
+  line-height: 1;
+}
